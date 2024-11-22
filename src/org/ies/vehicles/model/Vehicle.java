@@ -21,6 +21,7 @@ public class Vehicle {
 
     public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
+
     }
 
     public int getMaxSpeed() {
