@@ -6,51 +6,49 @@ import org.ies.vehicles.model.VehicleType;
 import java.util.Scanner;
 
 public class VehicleReader {
-    private final Scanner scanner;
-    private final VehicleType vehicleType;
 
-    public VehicleReader(Scanner scanner, VehicleType vehicleType) {
+    private final Scanner scanner;
+
+    public VehicleReader(Scanner scanner) {
         this.scanner = scanner;
-        this.vehicleType = vehicleType;
     }
 
     public Vehicle read() {
+        System.out.println("Introduce los datos del vehiculo");
         int option;
         do {
-            System.out.println("Introduce los datos del vehiculo");
-            System.out.println("Elige el tipo de vehiculo");
+            System.out.println("Elige el tipo de vehiculo:");
             System.out.println("1. Coche");
             System.out.println("2. Moto");
             System.out.println("3. Camion");
-            option = scanner.nextInt;
-            scanner.nextLine;
-            VehicleType vehicleType;
+            option = scanner.nextInt();
+            scanner.nextLine();
         } while (option != 1 && option != 2 && option != 3);
 
-        if(option == 1) {
-            vehicleType = vehicleType.Car;
+        VehicleType vehicleType;
+        if (option == 1) {
+            vehicleType = VehicleType.Car;
         } else if (option == 2) {
-            vehicleType = vehicleType.Motorbike;
+            vehicleType = VehicleType.Motorbike;
         } else {
-            vehicleType = vehicleType.Truck;
+            vehicleType = VehicleType.Truck;
         }
 
-        System.out.println("Velcidad maxima");
+        System.out.println("Velocidad maxima:");
         int maxSpeed = scanner.nextInt();
-        scanner.nextLine;
+        scanner.nextLine();
 
         System.out.println("Color");
-        String color = scanner.nextLine;
+        String color = scanner.nextLine();
 
         System.out.println("Matricula");
-        String matricula = scanner.nextLine;
+        String plate = scanner.nextLine();
 
-       return new Vehicle(
+        return new Vehicle(
                 vehicleType,
                 maxSpeed,
                 color,
                 plate
         );
-
-     }
+    }
 }

@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Garage {
     private String name;
     private String address;
-    private Vehicle []vehicles;
+    private Vehicle[] vehicles;
 
     public Garage(String name, String address, Vehicle[] vehicles) {
         this.name = name;
@@ -18,20 +18,20 @@ public class Garage {
         return name;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public Vehicle[] getVehicles() {
-        return vehicles;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public Vehicle[] getVehicles() {
+        return vehicles;
     }
 
     public void setVehicles(Vehicle[] vehicles) {
@@ -40,7 +40,6 @@ public class Garage {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Garage garage = (Garage) o;
         return Objects.equals(name, garage.name) && Objects.equals(address, garage.address) && Objects.deepEquals(vehicles, garage.vehicles);
