@@ -14,7 +14,7 @@ public class Main {
         VehicleReader vehicleReader = new VehicleReader(scanner);
         GarageReader garageReader = new GarageReader(scanner, vehicleReader);
 
-        // Ejecucion del programa
+        // Ejecucion del programaa
         Garage garage = garageReader.read();
 
         // Muestra el resultado

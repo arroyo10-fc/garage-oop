@@ -38,7 +38,7 @@ public class Vehicle {
     public void setColor(String color) {
         this.color = color;
     }
-
+//
     public String getPlate() {
         return plate;
     }
